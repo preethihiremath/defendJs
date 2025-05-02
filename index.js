@@ -1,5 +1,5 @@
 import express from 'express';
-import defendjs from './middleware/index.js';
+import defendjs from './core/security/middleware.js';
 import cors from 'cors';
 
 const app = express();
