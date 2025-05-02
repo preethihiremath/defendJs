@@ -1,18 +1,28 @@
-const express = require('express')
+import express from 'express';
+import defendjs from './core/security/middleware.js';
+import cors from 'cors';
+
 const app = express();
 
-app.use(express.json());
 
+app.use(express.json());
+app.use(cors());
 //add the middleware library
-app.use( );
+app.use(defendjs);
 
 app.get('/', (req, res) =>{
     res.send(
-        'Shield Js to the Rescue'
+        'Defend Js to the Rescue'
     );
 }
 )
 
-app.listen(3000, ()=>{
-    console.log('server is running on 3000');
+app.post('/api/data', (req, res) => {
+    // Handle the post request
+    res.send('Data received');
+});
+
+
+app.listen(3001, ()=>{
+    console.log('server is running on 3001');
 })

@@ -1,0 +1,11 @@
+node_modules/
+tests/
+test/
+*.test.mjs
+*.spec.js
+
+.env
+
+plansAndEvidences/
+Project_Plan.md
+Research.md
